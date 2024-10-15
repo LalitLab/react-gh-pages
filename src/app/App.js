@@ -25,7 +25,8 @@ const App = () => {
        {/* Main Content */}
        <main className="flex-grow">
          <Routes>
-           <Route exact path="/" element={<Home />} />
+           <Route path="/" element={<Home />} />
+           <Route path="/react-gh-pages" element={<Home />} />
            <Route path="/about" element={<About />} />
            <Route path="/projects" element={<Projects />} />
            <Route path="/contact" element={<Contact />} />
