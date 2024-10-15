@@ -25,7 +25,6 @@ const App = () => {
        {/* Main Content */}
        <main className="flex-grow">
          <Routes>
-           {/* <Route exact path="/" component={Home} /> */}
            <Route exact path="/" element={<Home />} />
            <Route path="/about" element={<About />} />
            <Route path="/projects" element={<Projects />} />
@@ -35,7 +34,7 @@ const App = () => {
 
        {/* Footer */}
        <footer className="bg-gray-800 text-white p-4 text-center">
-         &copy; {new Date().getFullYear()} My Portfolio
+         &copy; {new Date().getFullYear()} Lalit Bhardwaj
        </footer>
      </div>
    </Router>
