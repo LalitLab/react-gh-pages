@@ -12,52 +12,67 @@
     <style>
       /* Custom CSS for animations and effects */
       @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .fade-in {
-          animation: fadeIn 0.8s ease-out forwards;
+        animation: fadeIn 0.8s ease-out forwards;
       }
 
-      .delay-1 { animation-delay: 0.2s; }
-      .delay-2 { animation-delay: 0.4s; }
-      .delay-3 { animation-delay: 0.6s; }
-      .delay-4 { animation-delay: 0.8s; }
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+      .delay-4 {
+        animation-delay: 0.8s;
+      }
 
       .gradient-text {
-          background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
 
       .project-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
       }
 
       .nav-link {
-          position: relative;
+        position: relative;
       }
 
       .nav-link::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: -2px;
-          left: 0;
-          background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-          transition: width 0.3s ease;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        transition: width 0.3s ease;
       }
 
       .nav-link:hover::after {
-          width: 100%;
+        width: 100%;
       }
 
       .active::after {
-          width: 100%;
+        width: 100%;
       }
     </style>
   </head>
@@ -405,34 +420,98 @@
             <div
               class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center"
             >
-              <i class="fas fa-project-diagram text-white text-6xl"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                class="inline-block w-24 h-24 mr-1"
+              >
+                <defs>
+                  <style>
+                    .a {
+                      fill: #222017;
+                    }
+                    .b {
+                      fill: #c7252d;
+                    }
+                    .a,
+                    .b {
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="a"
+                  d="M170.428,223.723h0c3.424,3.673,8.659,5.819,11.873,2.6l9.948-9.951,38.307-38.3c6.2-6.2-7.522-19.88-13.7-13.693l-14.14,14.136.735.73.083.081a4.5,4.5,0,0,1-.083,6.263l-.824.823-3.994,4-3.9-3.9,0,0-30-30,.006,0-3.9-3.91,4-3.993.824-.824a4.492,4.492,0,0,1,6.257-.079l.082.079.737.734,21.252-21.248a38.92,38.92,0,0,1,54.933,0l18.771,18.767a38.954,38.954,0,0,1,0,54.937l-45.416,45.418L205.2,263.442a38.949,38.949,0,0,1-54.941,0l-23.825-23.831a47.96,47.96,0,0,0,41.52-13.413Z"
+                  transform="translate(-76.453 -72.22)"
+                />
+                <path
+                  class="b"
+                  d="M185.033,123.276l-.007,0c-3.421-3.675-8.656-5.824-11.871-2.608l-9.947,9.95-38.308,38.3c-6.2,6.2,7.521,19.881,13.7,13.7l14.14-14.142-.733-.729-.083-.083a4.493,4.493,0,0,1,.083-6.262l.824-.822,3.993-4,3.9,3.9,0,0,30,30-.007,0,3.905,3.908-3.992,4-.83.82a4.491,4.491,0,0,1-6.254.081l-.083-.081-.734-.735-21.252,21.246a38.917,38.917,0,0,1-54.935,0L87.786,200.967a38.955,38.955,0,0,1,0-54.937L133.2,100.611l17.056-17.055a38.954,38.954,0,0,1,54.941,0l23.825,23.831A47.955,47.955,0,0,0,187.506,120.8Z"
+                  transform="translate(-76.453 -72.22)"
+                />
+              </svg>
             </div>
             <div class="p-6">
               <h3 class="font-bold text-xl mb-2">Steampipe</h3>
               <p class="text-gray-600 mb-4">
-                A full-featured e-commerce platform with product listings, cart
-                functionality, and payment integration.
+                A open source to dynamically query APIs, code and more with SQL.
+                Zero-ETL from 140 data sources. <a href=""
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded"
-                  >React</span
+                  >Go</span
                 >
                 <span
                   class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded"
-                  >Node.js</span
+                  >hcl</span
                 >
                 <span
                   class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded"
-                  >MongoDB</span
+                  >PostgreSQL</span
                 >
               </div>
               <div class="flex space-x-3">
-                <a href="#" class="text-blue-500 hover:text-blue-700">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
+                <a
+                  href="https://steampipe.io/"
+                  target="_blank"
+                  class="text-blue-500 hover:text-blue-700"
+                >
+                  <i class="fas fa-external-link-alt"></i> Website
                 </a>
-                <a href="#" class="text-gray-500 hover:text-gray-700">
-                  <i class="fab fa-github"></i> Code
+                <a
+                  href="https://github.com/turbot/steampipe-plugin-aws"
+                  target="_blank"
+                  class="text-gray-500 hover:text-gray-700"
+                >
+                  <i class="fab fa-github"></i> AWS Plugin
+                </a>
+                <a
+                  href="https://github.com/turbot/terraform-provider-steampipecloud"
+                  class="text-gray-500 hover:text-gray-700"
+                  target="_blank"
+                >
+                  <svg
+                    class="inline-block w-4 h-4 mr-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 128 128"
+                  >
+                    <g fill-rule="evenodd">
+                      <path
+                        d="M77.941 44.5v36.836L46.324 62.918V26.082zm0 0"
+                        fill="#5c4ee5"
+                      />
+                      <path
+                        d="M81.41 81.336l31.633-18.418V26.082L81.41 44.5zm0 0"
+                        fill="#4040b2"
+                      />
+                      <path
+                        d="M11.242 42.36L42.86 60.776V23.941L11.242 5.523zm0 0M77.941 85.375L46.324 66.957v36.82l31.617 18.418zm0 0"
+                        fill="#5c4ee5"
+                      />
+                    </g>
+                  </svg>
+                  Provider
                 </a>
               </div>
             </div>
