@@ -91,6 +91,7 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#projects" class="nav-link">Projects</a>
+            <a href="#resume" class="nav-link">Resume</a>
             <a href="#contact" class="nav-link">Contact</a>
           </div>
           <div class="md:hidden flex items-center">
@@ -112,6 +113,7 @@
         <a href="#about" class="block py-2 nav-link">About</a>
         <a href="#skills" class="block py-2 nav-link">Skills</a>
         <a href="#projects" class="block py-2 nav-link">Projects</a>
+        <a href="#resume" class="block py-2 nav-link">Resume</a>
         <a href="#contact" class="block py-2 nav-link">Contact</a>
       </div>
     </nav>
@@ -138,6 +140,11 @@
               href="#contact"
               class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition"
               >Get In Touch</a
+            >
+            <a
+              href="#resume"
+              class="px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+              ><i class="fas fa-file-alt mr-2"></i>View Resume</a
             >
             <a
               href="#projects"
@@ -609,6 +616,232 @@
       </div>
     </section>
 
+    <!-- Resume Section -->
+    <section id="resume" class="py-16 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 fade-in">My Resume</h2>
+        
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 fade-in delay-1">
+          <div class="text-center">
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-md">
+              <div class="text-6xl text-blue-500 mb-4">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Download Resume</h3>
+              <p class="text-gray-600 mb-6">
+                Get a detailed overview of my experience, skills, and achievements in PDF format.
+              </p>
+              <a
+                href="resume.pdf"
+                target="_blank"
+                class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition"
+              >
+                <i class="fas fa-download mr-2"></i>Download PDF
+              </a>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-md">
+              <div class="text-6xl text-green-500 mb-4">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">View Online</h3>
+              <p class="text-gray-600 mb-6">
+                View my resume directly in your browser without downloading.
+              </p>
+              <button
+                onclick="openResumeModal()"
+                class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+              >
+                <i class="fas fa-external-link-alt mr-2"></i>View Resume
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Quick Resume Preview -->
+        <div class="mt-16 fade-in delay-2">
+          <h3 class="text-2xl font-bold text-center mb-8">Quick Overview</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+              <div class="text-4xl text-blue-500 mb-3">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Experience</h4>
+              <p class="text-3xl font-bold text-blue-600">10+ Years</p>
+              <p class="text-gray-600">Full Stack Development, Cloud and Platform Engineering</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+              <div class="text-4xl text-purple-500 mb-3">
+                <i class="fas fa-code"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Technologies</h4>
+              <p class="text-3xl font-bold text-purple-600">15+</p>
+              <p class="text-gray-600">Programming Languages & Tools</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+              <div class="text-4xl text-green-500 mb-3">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Projects</h4>
+              <p class="text-3xl font-bold text-green-600">20+</p>
+              <p class="text-gray-600">Completed Successfully</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+          <div class="flex justify-between items-center p-6 border-b">
+            <h3 class="text-xl font-bold">Lalit Bhardwaj - Resume</h3>
+            <button
+              onclick="closeResumeModal()"
+              class="text-gray-500 hover:text-gray-700 text-2xl"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+            <div class="resume-content">
+              <h2 class="text-2xl font-bold mb-4 text-center">Lalit Bhardwaj</h2>
+              <p class="text-center text-gray-600 mb-6">Full Stack Developer | Cloud & Platform Engineer</p>
+              
+              <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">Contact Information</h3>
+                <div class="grid md:grid-cols-2 gap-2 text-sm">
+                  <p><i class="fas fa-envelope mr-2"></i>lt.b1991@gmail.com</p>
+                  <p><i class="fas fa-phone mr-2"></i>+91 81717 77073</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>Noida, Uttar Pradesh, India</p>
+                  <p><i class="fab fa-linkedin mr-2"></i>linkedin.com/in/lb1993</p>
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">Professional Summary</h3>
+                <p class="text-sm text-gray-700">
+                  Experienced Cloud and Platform Engineer with 10 years of hands-on experience designing and delivering scalable, secure, and cost-efficient solutions across AWS, Azure, and Google Cloud. Specialize in Kubernetes, GitHub Actions, Terraform, and DevOps automation, with a strong focus on developer enablement, infrastructure security, and CI/CD optimization.
+                </p>
+              </div>
+              
+              <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">Technical Skills</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <h4 class="font-semibold mb-2">Frontend</h4>
+                    <p class="text-gray-700">React, JavaScript, Zustand, HTML, CSS, TailwindCSS, Next.js</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">Backend</h4>
+                    <p class="text-gray-700">Node.js, Python, Go, Express</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">Database</h4>
+                    <p class="text-gray-700">MongoDB, MySQL, PostgreSQL</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">DevOps & Cloud</h4>
+                    <p class="text-gray-700">Kubernetes, Docker, AWS, Azure, GCP, CI/CD, GitOps, Terraform</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">Professional Experience</h3>
+                
+                <div class="mb-4">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-semibold">Technical Architect</h4>
+                    <span class="text-sm text-gray-600">Dec 2022 - Present</span>
+                  </div>
+                  <p class="text-sm font-medium text-gray-700 mb-1">Infinite Computer Solutions</p>
+                  <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                    <li>Led development of Internal Developer Platform (IDP) streamlining service discovery and collaboration</li>
+                    <li>Optimized CI/CD pipelines and reduced infrastructure costs by 80% through scalable GitHub Actions runners</li>
+                    <li>Automated Kubernetes add-on deployments with GitOps and built internal portals for better coordination</li>
+                    <li>Centralized IAM access and enforced granular RBAC controls across Kubernetes clusters</li>
+                  </ul>
+                </div>
+                
+                <div class="mb-4">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-semibold">Senior Software Engineer</h4>
+                    <span class="text-sm text-gray-600">Feb 2018 - Nov 2022</span>
+                  </div>
+                  <p class="text-sm font-medium text-gray-700 mb-1">Turbot</p>
+                  <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                    <li>Worked on Turbot platform and open-source Steampipe project for multi-cloud governance</li>
+                    <li>Created Terraform providers, plugins, and compliance mods for improved visibility and policy enforcement</li>
+                    <li>Architected key integrations including AWS/Azure Government clouds and AWS Outposts</li>
+                    <li>Helped Turbot earn multiple technology and featured partner recognitions</li>
+                  </ul>
+                </div>
+                
+                <div class="mb-4">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-semibold">Systems Engineer</h4>
+                    <span class="text-sm text-gray-600">Sep 2015 - Jan 2018</span>
+                  </div>
+                  <p class="text-sm font-medium text-gray-700 mb-1">TCS</p>
+                  <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                    <li>Automated financial data workflows with IBM DataStage and BMC Control-M</li>
+                    <li>Implemented seamless data migration from SharePoint to Palamida using Java and APIs</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">Education</h3>
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="font-semibold">B.Tech. Computer Science & Engineering</h4>
+                  <span class="text-sm text-gray-600">2011 - 2015</span>
+                </div>
+                <p class="text-sm text-gray-700">Gurukula Kangri University, Haridwar</p>
+                <p class="text-sm text-gray-600">Graduated with honors. Completed coursework in algorithms, data structures, web development, and software engineering principles.</p>
+              </div>
+              
+              <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">Key Projects</h3>
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Steampipe</h4>
+                  <p class="text-sm text-gray-700 mb-2">Open source tool to dynamically query APIs, code and more with SQL. Zero-ETL from 140 data sources.</p>
+                  <p class="text-sm text-gray-600">Technologies: Go, HCL, PostgreSQL</p>
+                </div>
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Internal Developer Platform (IDP)</h4>
+                  <p class="text-sm text-gray-700 mb-2">Streamlined service discovery, reuse, and collaboration with usage-based billing and scalable CI/CD infrastructure.</p>
+                  <p class="text-sm text-gray-600">Technologies: Kubernetes, GitHub Actions, GitOps, Terraform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 border-t bg-gray-50">
+            <div class="flex justify-between items-center">
+              <a
+                href="resume.pdf"
+                target="_blank"
+                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              >
+                <i class="fas fa-download mr-2"></i>Download PDF
+              </a>
+              <button
+                onclick="closeResumeModal()"
+                class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -692,7 +925,9 @@
             </div>
           </div>
 
-          <div class="md:w-1/2">
+          <!-- Commenting out the form for now -->
+          <!-- Need to find out a way that user can send message to me using gmail api -->
+          <!-- <div class="md:w-1/2">
             <form class="space-y-4">
               <div>
                 <label
@@ -757,7 +992,7 @@
                 Send Message
               </button>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -787,6 +1022,9 @@
               href="#projects"
               class="text-gray-400 hover:text-white transition"
               >Projects</a
+            >
+            <a href="#resume" class="text-gray-400 hover:text-white transition"
+              >Resume</a
             >
             <a href="#contact" class="text-gray-400 hover:text-white transition"
               >Contact</a
@@ -884,6 +1122,33 @@
           form.reset();
         });
       }
+
+      // Resume modal functions
+      function openResumeModal() {
+        const modal = document.getElementById("resumeModal");
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeResumeModal() {
+        const modal = document.getElementById("resumeModal");
+        modal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close modal when clicking outside
+      document.getElementById("resumeModal").addEventListener("click", function (e) {
+        if (e.target === this) {
+          closeResumeModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeResumeModal();
+        }
+      });
     </script>
   </body>
 </html>
